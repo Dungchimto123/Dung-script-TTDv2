@@ -1,0 +1,74 @@
+-- Khởi tạo thư viện Rayfield UI
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+-- Tạo cửa sổ chính (Window) với hệ thống Key bảo mật nha
+local Window = Rayfield:CreateWindow({
+   Name = "Trade scam script",
+   LoadingTitle = "Đang tải giao diện...",
+   LoadingSubtitle = "Vui lòng chờ xíu nha",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = "TradeScamConfig",
+      FileName = "BigHub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "",
+      RememberJoins = true
+   },
+   KeySystem = true, -- Đã BẬT hệ thống key rồi nè bạn ơi!
+   KeySettings = {
+      Title = "Hệ Thống Xác Thực Key",
+      Subtitle = "Vui lòng nhập Key để tiếp tục nha",
+      Note = "Mẹo nhỏ: Hãy nhập key mà bạn đã cài đặt vào ô dưới đây nè",
+      FileName = "TradeScamKey", -- Lưu key lại để lần sau không cần nhập lại liền
+      SaveKey = true, -- Tự động nhớ key cho máy đã nhập đúng
+      GrabKeyFromUrl = false, -- Không dùng link ngoài, điền key trực tiếp ở dưới nha
+      Key = {"dung17072023"} -- Mã key chính xác của bạn nè!
+   }
+})
+
+-- Tạo Tab "Trade Scam" ở góc trên bên trái nè
+local Tab = Window:CreateTab("Trade Scam", 4483362458) -- ID icon mặc định
+
+-- Tạo các nút bấm (Buttons) trống trang trí giao diện:
+
+local Button1 = Tab:CreateButton({
+   Name = "Start Trade Scam",
+   Callback = function()
+      -- Bạn bỏ code hành động của bạn vào giữa đây nha
+      print("Đã bấm Start Trade Scam nè!")
+   end,
+})
+
+local Button2 = Tab:CreateButton({
+   Name = "Dupe Unit",
+   Callback = function()
+      -- Bạn bỏ code hành động của bạn vào giữa đây nha
+      print("Đã bấm Dupe Unit nè!")
+   end,
+})
+
+local Button3 = Tab:CreateButton({
+   Name = "Freeze Trade",
+   Callback = function()
+      -- Bạn bỏ code hành động của bạn vào giữa đây nha
+      print("Đã bấm Freeze Trade nè!")
+   end,
+})
+
+local Button4 = Tab:CreateButton({
+   Name = "Auto Ready",
+   Callback = function()
+      -- Bạn bỏ code hành động của bạn vào giữa đây nha
+      print("Đã bấm Auto Ready nè!")
+   end,
+})
+
+-- Thông báo nhỏ khi nhập đúng Key và mở Menu thành công
+Rayfield:Notify({
+   Title = "Xác Thực Thành Công!",
+   Content = "Menu của bạn đã được bật lên rồi nè! Chúc bạn dùng vui vẻ nha~",
+   Duration = 5,
+   Image = 4483362458,
+})
